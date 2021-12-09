@@ -2,6 +2,8 @@
     margin: 0;
     box-sizing: border-box;
     padding: 0;
+    font-family: 'Space Mono', monospace;
+    color: #4B6A9B;
 }
 
 
@@ -11,15 +13,100 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #F6F8FF;
 
 }
 
 .container{
     width: 80%;
-    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
     height: auto;
     padding: 2rem;
 }
+
+#form{
+    background-color: #FEFEFE;
+}
+
+.userCard{
+    background-color: #FEFEFE;
+}
+
+
+/*///////////////
+     TYPOGRAPHY 
+///////////////*/
+
+.headerText{
+    font-weight: 700;
+    font-size: 1.625rem;
+    color: #222731;
+    letter-spacing: 0;
+}
+
+.theme span{
+    font-weight: 700;
+    font-size: 0.8125rem;
+    font-style: normal;
+}
+
+#button{
+    color: #fff;
+    
+    font-size: 1rem;
+}
+
+.userName h1{
+    font-weight: 700;
+    font-size: 1.625rem;
+    color: #222731;
+    letter-spacing: 0;
+}
+
+.userName p{
+    font-weight: 400;
+    font-size: 1rem;
+    color: #0079FF;
+}
+
+.date{
+    color: #697C9A;
+    font-size: 0.9375rem;
+}
+
+.userBio{
+    font-weight: 400;
+    font-size: 0.9375rem;
+}
+
+.socialTitle{
+    font-weight: 400;
+    font-size: 0.8125rem;
+
+}
+
+.socialInfo{
+    font-weight: 700;
+    font-size: 1.375rem;
+    color: #2B3442;
+    background-color: #F6F8FF;
+}
+
+.socialIcon{
+
+}
+
+.socialLinksInfo{
+    font-size: 0.9375rem;
+    font-weight: 400;
+}
+
+
+/*//////////////
+    LAYOUT
+//////////////*/
 
 .header{
     display: flex;
@@ -30,6 +117,7 @@ body{
 .userCard{
     display: flex;
     flex-direction: column;
+    padding: 2rem;
     
 
 }
@@ -61,9 +149,38 @@ body{
     border: 2px wheat solid;
     width: 80%;
     align-self: flex-end;
+    padding-left: 2rem;
 }
 
 .userBio{
     width: 100%;
     margin-top: -1rem;
+}
+
+.socialInfo{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+}
+
+.repos,  .followers, .following{
+    border: 2px red solid;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: ;
+    gap: 0;
+}
+
+.socialLinks{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.socialLink{
+    display: flex;
+    gap: 2rem;
+    width: 45%;
+    border: 2px solid blue;
 }
