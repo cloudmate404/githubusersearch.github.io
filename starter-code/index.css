@@ -194,7 +194,7 @@ input:focus, textarea:focus, select:focus{
 .userHeader{
     display: flex;
     gap: 2rem;
-
+    
     width: 100%;
    
 
@@ -218,6 +218,9 @@ input:focus, textarea:focus, select:focus{
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+}
+.login{
+    display: flex;
 }
 
 
@@ -276,6 +279,10 @@ input:focus, textarea:focus, select:focus{
     
 }
 
+.notAvailable{
+    opacity: 0.5;
+}
+
 
 
 @media (max-width: 1024px ) {
@@ -285,7 +292,7 @@ input:focus, textarea:focus, select:focus{
 
     .container{
         width: 75%;
-        min-width: 750px;
+        min-width: 595px;
         
     }
 
@@ -293,6 +300,9 @@ input:focus, textarea:focus, select:focus{
         padding: 3rem;
     }
     
+    .userHeader{
+        align-items: center;
+    }
 
     .userInfo{
         flex-direction: column;
@@ -311,10 +321,10 @@ input:focus, textarea:focus, select:focus{
     }
 }
 
-@media (max-width: 740px) {
+@media (max-width: 600px) {
     
     .container{
-        width: 90%;
+        width: 88%;
         min-width: 327px;
         padding: 2rem 0;
         
@@ -403,5 +413,15 @@ input:focus, textarea:focus, select:focus{
         width: 100%;
         
         
+    }
+    .location{
+        order: -4;
+    }
+
+    .blog{
+        order: -3;
+    }
+    .twitter{
+        order: -2;
     }
 }

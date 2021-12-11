@@ -14,80 +14,62 @@ function getUserData(user){
 }
 
 function renderData(data){
-    // if(data.name === null){
-    //     return  data.login
-    // } else{
-    //     return data.name
-    // }
-   
-    document.body.innerHTML=`
-    <div class="container">
-    <div class="header">
-      <h1 class="headerText">devFinder</h1>
-      <i class="theme"><span>Dark</span><img src="./assets/icon-moon.svg" alt=""></i>
-    </div>
-    <form class="form"  id="form">
-      <img src="./assets/icon-search.svg" alt="" class="searchIcon">
-      <input type="text" placeholder="Search GitHub username…" name="search" id="searchInput">
-      <button type="submit" id="button" >Search</i></button>
-    </form>
-    <div class="userCard">
-      <div class="userHeader">
-        <img src="https://avatars.githubusercontent.com/u/583231?v=4" alt="" class="userImage">
-        <div class="userInfo">
-          <div class="userName">
-            <h1>the Octocat</h1>
-            <p>${data.login}</p>
-          </div>
-          <p class="date">Joined 25 Jan 2011</p>
-        </div>
-        
-      </div>
+      // let name = data.name
+      // let login = data.login
 
-      <div class="userRest">
+      if(data.name === null){
+          document.getElementById('name').textContent = data.login
+      }else{
+         document.getElementById('name').textContent = data.name
+      }
 
-        <p class="userBio">This profile has no bio </p>
+      document.getElementById('login').textContent =  data.login
+      document.getElementById('userImage').src = data.avatar_url
+      document.getElementById('date').textContent =data.created_at
 
-        <div class="socialInfos">
-          <div class="repos">
-            <p class="socialTitle">Repos</p>
-            <p class="socialInfo">8</p>
-          </div>
-          <div class="followers">
-            <p class="socialTitle">Followers</p>
-            <p class="socialInfo">3938</p>
-          </div>
-          <div class="following">
-            <p class="socialTitle">Following</p>
-            <p class="socialInfo">9</p>
-          </div>
-        </div>
+      if(data.bio === null){
+        document.getElementById('userBio').textContent= 'This profile has no bio.'
+      }else{
+        document.getElementById('userBio').textContent = data.bio
+      }
 
-        <div class="socialLinks">
-          <div class="location socialLink">
-            <img src="./assets/icon-location.svg" alt="" class="socialIcon">
-            <p class="socialLinksInfo">San Francisco</p>
-          </div>
-          <div class="twitter socialLink">
-            <img src="./assets/icon-twitter.svg" alt="" class="socialIcon">
-            <p class="socialLinksInfo">Not Available</p>
-          </div>
-          <div class="blog socialLink">
-            <img src="./assets/icon-website.svg" alt="" class="socialIcon">
-            <p class="socialLinksInfo">https://github.blog</p>
-          </div>
-          <div class="company socialLink">
-            <img src="./assets/icon-company.svg" alt="" class="socialIcon">
-            <p class="socialLinksInfo">@github</p>
-          </div>
-        </div>
-      </div>  
+      document.getElementById('repos').textContent = data.public_repos
+      document.getElementById('followers').textContent = data.followers
+      document.getElementById('following').textContent =data.following
       
-    </div>
-    
-  </div>
-    
-    `
+      if(data.location === null){
+        document.getElementById('location').textContent = 'Not available'
+        document.querySelector('.location').classList.add('notAvailable')
+      }else{
+        document.getElementById('location').textContent = data.location
+      }
+
+      if(data.blog === ''){
+        document.getElementById('blog').textContent = 'Not available'
+        document.querySelector('.blog').classList.add('notAvailable')
+
+      }else{
+        document.getElementById('blog').textContent = data.blog
+      }
+
+      if(data.twitter_username === null){
+        document.getElementById('twitter').textContent = 'Not available'
+        document.querySelector('.twitter').classList.add('notAvailable')
+
+      }else{
+        document.getElementById('twitter').textContent = data.twitter_username
+        // document.querySelector('.twitter').classList.remove('notAvailable')
+      }
+
+      if(data.company === null){
+        document.getElementById('company').textContent = 'Not available'
+        document.querySelector('.company').classList.add('notAvailable')
+
+      }else{
+        document.getElementById('company').textContent = data.company
+      }
+
+   
 }
 
 
@@ -96,13 +78,7 @@ form.addEventListener('submit',e=>{
     console.log(searchInput.value)
     user = searchInput;
     getUserData(searchInput.value)
+    searchInput.value =''
 
 })
 
-// async function getUsers(){
-//     const res = await fetch(`https://api.github.com/users/${user}`)
-//     const data = await res.json()
-//         console.log(data)
-// }
-
-// getUsers(user)
