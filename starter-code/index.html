@@ -15,10 +15,14 @@
   <div class="container">
     <div class="header">
       <h1 class="headerText">devFinder</h1>
-      <i class="theme"><span>Dark</span><img src="./assets/icon-moon.svg" alt=""></i>
+      <div class="theme">
+        <p>Dark</p>
+        <img src="./assets/icon-moon.svg" alt="">
+      </div>
+      
     </div>
     <form class="form"  id="form">
-      <img src="./assets/icon-search.svg" alt="">
+      <img src="./assets/icon-search.svg" alt="" class="searchIcon">
       <input type="text" placeholder="Search GitHub username…" name="search" id="searchInput">
       <button type="submit" id="button" >Search</i></button>
     </form>
@@ -37,9 +41,9 @@
 
       <div class="userRest">
 
-        <p class="userBio">This profile has no bio </p>
+        <p class="userBio">This profile has no bio Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis voluptatibus sit quae nesciunt. Aperiam in quis illo. Illum, in, nobis error architecto provident laudantium repudiandae aut iusto libero quisquam cupiditate? </p>
 
-        <div class="socialInfo">
+        <div class="socialInfos">
           <div class="repos">
             <p class="socialTitle">Repos</p>
             <p class="socialInfo">8</p>
@@ -52,7 +56,7 @@
             <p class="socialTitle">Following</p>
             <p class="socialInfo">9</p>
           </div>
-        </div>`
+        </div>
 
         <div class="socialLinks">
           <div class="location socialLink">
@@ -65,7 +69,8 @@
           </div>
           <div class="blog socialLink">
             <img src="./assets/icon-website.svg" alt="" class="socialIcon">
-            <p class="socialLinksInfo">https://github.blog</p>
+            
+            <a href="https://github.blog" class="socialLinksInfo">https://github.blog</a>
           </div>
           <div class="company socialLink">
             <img src="./assets/icon-company.svg" alt="" class="socialIcon">

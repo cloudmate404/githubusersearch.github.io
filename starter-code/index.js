@@ -27,58 +27,58 @@ function renderData(data){
       <i class="theme"><span>Dark</span><img src="./assets/icon-moon.svg" alt=""></i>
     </div>
     <form class="form"  id="form">
-      <img src="./assets/icon-search.svg" alt="">
-      <input type="text" placeholder="Search.." name="search" id="searchInput">
-      <button type="submit" >Search</i></button>
+      <img src="./assets/icon-search.svg" alt="" class="searchIcon">
+      <input type="text" placeholder="Search GitHub username…" name="search" id="searchInput">
+      <button type="submit" id="button" >Search</i></button>
     </form>
     <div class="userCard">
       <div class="userHeader">
-        <img src="./assets/favicon-32x32.png" alt="" class="userImage">
+        <img src="https://avatars.githubusercontent.com/u/583231?v=4" alt="" class="userImage">
         <div class="userInfo">
           <div class="userName">
-            <h1>${data.name}</h1>
+            <h1>the Octocat</h1>
             <p>${data.login}</p>
           </div>
-          <p>Joined ${data.created_at}</p>
+          <p class="date">Joined 25 Jan 2011</p>
         </div>
         
       </div>
 
       <div class="userRest">
 
-        <p class="userBio">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus, at sequi? Rerum fugiat, tempora, ut harum sit laborum recusandae quas officia dolorem autem voluptatem at aperiam, eaque culpa ratione animi.</p>
+        <p class="userBio">This profile has no bio </p>
 
-        <div class="socialInfo">
+        <div class="socialInfos">
           <div class="repos">
             <p class="socialTitle">Repos</p>
-            <p class="socialInfo"></p>
+            <p class="socialInfo">8</p>
           </div>
           <div class="followers">
             <p class="socialTitle">Followers</p>
-            <p class="socialInfo"></p>
+            <p class="socialInfo">3938</p>
           </div>
           <div class="following">
             <p class="socialTitle">Following</p>
-            <p class="socialInfo"></p>
+            <p class="socialInfo">9</p>
           </div>
         </div>
 
         <div class="socialLinks">
-          <div class="location">
+          <div class="location socialLink">
             <img src="./assets/icon-location.svg" alt="" class="socialIcon">
-            <p class="socialLinksInfo"></p>
+            <p class="socialLinksInfo">San Francisco</p>
           </div>
-          <div class="twitter">
+          <div class="twitter socialLink">
             <img src="./assets/icon-twitter.svg" alt="" class="socialIcon">
-            <p class="socialLinksInfo"></p>
+            <p class="socialLinksInfo">Not Available</p>
           </div>
-          <div class="blog">
+          <div class="blog socialLink">
             <img src="./assets/icon-website.svg" alt="" class="socialIcon">
-            <p class="socialLinksInfo"></p>
+            <p class="socialLinksInfo">https://github.blog</p>
           </div>
-          <div class="company">
+          <div class="company socialLink">
             <img src="./assets/icon-company.svg" alt="" class="socialIcon">
-            <p class="socialLinksInfo"></p>
+            <p class="socialLinksInfo">@github</p>
           </div>
         </div>
       </div>  
