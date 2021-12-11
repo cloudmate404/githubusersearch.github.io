@@ -5,15 +5,29 @@ let user
 
 function getUserData(user){
     fetch(`https://api.github.com/users/${user}`)
-        .then(res => res.json())
+        .then(res => {
+          if(res.status == 200){
+            document.getElementById('errorMessage').textContent = ''
+            return res.json()
+          }else{
+            throw new Error(res.status)
+          }
+        })
         .then(data =>{
             console.log(data)
             renderData(data)
+        })
+        .catch(Error =>{
+          document.getElementById('errorMessage').textContent = 'No result'
+          document.getElementById('searchInput').placeholder =''
+          document.getElementById('searchInput').style.width='25%'
         })
     
 }
 
 function renderData(data){
+      const date = new Date(data.created_at)
+      const createdDate = date.toDateString().slice(4,20)
       // let name = data.name
       // let login = data.login
 
@@ -25,7 +39,7 @@ function renderData(data){
 
       document.getElementById('login').textContent =  data.login
       document.getElementById('userImage').src = data.avatar_url
-      document.getElementById('date').textContent =data.created_at
+      document.getElementById('date').textContent =createdDate
 
       if(data.bio === null){
         document.getElementById('userBio').textContent= 'This profile has no bio.'
@@ -82,3 +96,8 @@ form.addEventListener('submit',e=>{
 
 })
 
+
+document.getElementById('searchInput').addEventListener('click',()=>{
+  document.getElementById('errorMessage').textContent = ''
+  document.getElementById('searchInput').style.width='100%'
+})
