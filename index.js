@@ -134,12 +134,12 @@ theme.addEventListener('click',()=>{
   if(document.body.classList.contains('darkTheme')){
     theme.innerHTML = `
     <p>Light</p>
-    <img src="/assets/icon-sun.svg" alt="" class="themeIcon">
+    <img src="./assets/icon-sun.svg" alt="" class="themeIcon">
     `
   }else{
     theme.innerHTML =`
     <p>Dark</p>
-    <img src="/assets/icon-moon.svg" alt="" class="themeIcon">
+    <img src="./assets/icon-moon.svg" alt="" class="themeIcon">
     `
   }
   
