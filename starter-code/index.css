@@ -3,10 +3,28 @@
     box-sizing: border-box;
     padding: 0;
     font-family: 'Space Mono', monospace;
-    color: #4B6A9B;
+    color: var(--main-text-color);
 }
 
+:root{
+    --bg-color: #F6F8FF;
+    --card-color: #FEFEFE;
+    --bold-text-color:#2B3442;
+    --main-text-color:#4B6A9B;
+    --socialLinkbg-color:#F6F8FF;
+    --card-box-shadow: 0 16px 30px -10px rgba(70, 96, 187, 0.2);
 
+    /*  */
+}
+
+.darkTheme{
+    --bg-color: #141D2F;
+    --card-color: #1E2A47;
+    --bold-text-color:#FFFFFF;
+    --main-text-color:#FFFFFF;
+    --socialLinkbg-color:#141D2F;
+    --card-box-shadow:  0 16px 30px -10px rgba(70, 88, 109, 0.15);
+}
 
 body{
     height: 100vh;
@@ -14,7 +32,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #F6F8FF;
+    background-color: var(--bg-color);
 
 }
 
@@ -30,18 +48,18 @@ body{
 }
 
 #form{
-    background-color: #FEFEFE;
+    background-color: var(--card-color);
     width: 100%;
     border-radius: 15px;
-    box-shadow: 0 16px 30px -10px rgba(70, 96, 187, 0.2);
+    box-shadow: var(--card-box-shadow);
 
     
 }
 
 .userCard{
-    background-color: #FEFEFE;
+    background-color: var(--card-color);
     border-radius: 15px;
-    box-shadow: 0 16px 30px -10px rgba(70, 96, 187, 0.2);
+    box-shadow: var(--card-box-shadow);
 }
 
 a, #button, .theme{
@@ -69,7 +87,7 @@ a:active, a:focus{
 .headerText{
     font-weight: 700;
     font-size: 1.625rem;
-    color: #222731;
+    color: var(--bold-text-color);
     letter-spacing: 0;
 }
 
@@ -86,10 +104,16 @@ a:active, a:focus{
     font-style: normal;
 }
 
-.theme p:active,
-.theme p:focus,
-.theme p:hover{
-    color: #222731;
+
+.theme:active,
+.theme:hover,
+.theme:focus{
+    filter: brightness(20%);
+}
+
+
+.themeIcon{
+    
 }
 
 
@@ -112,12 +136,18 @@ a:active, a:focus{
 
 #searchInput{
     font-size: 1.25rem;
+    background-color: var(--card-color);
+    
+}
+
+#searchInput::placeholder{
+    color: var(--main-text-color);
 }
 
 .userName h1{
     font-weight: 700;
     font-size: 1.625rem;
-    color: #222731;
+    color: var(--bold-text-color);
     letter-spacing: 0;
 }
 
@@ -128,7 +158,7 @@ a:active, a:focus{
 }
 
 .date{
-    color: #697C9A;
+    color: var(--main-text-color);
     font-size: 0.9375rem;
 }
 
@@ -147,7 +177,7 @@ a:active, a:focus{
 .socialInfo{
     font-weight: 700;
     font-size: 1.375rem;
-    color: #2B3442;
+    color: var(--bold-text-color);
     
 }
 
@@ -239,8 +269,10 @@ input:focus, textarea:focus, select:focus{
     display: flex;
     gap: 1rem;
     justify-content: space-between;
-   
     width: 80%;
+}
+.date{
+    margin-top:0.5rem;
 }
 
 .userName{
@@ -266,14 +298,14 @@ input:focus, textarea:focus, select:focus{
 
 .userBio{
     width: 100%;
-    margin-top: -4rem;
+    margin-top: -5rem;
 }
 
 .socialInfos{
     display: flex;
     justify-content: space-between;
     padding: 1rem 2rem;
-    background-color: #F6F8FF;
+    background-color:var(--socialLinkbg-color);
     border-radius: 15px;
 
     
@@ -337,6 +369,10 @@ input:focus, textarea:focus, select:focus{
         flex-direction: column;
         gap: 0.5rem;
         justify-content: flex-start;
+    }
+
+    .date{
+        margin-top:0;
     }
 
     .userRest{
@@ -433,6 +469,10 @@ input:focus, textarea:focus, select:focus{
         gap: 1rem;
         
         
+    }
+    
+    .date{
+        margin-top:0;
     }
     
     

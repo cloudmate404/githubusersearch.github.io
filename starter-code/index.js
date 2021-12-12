@@ -1,7 +1,28 @@
 const form = document.getElementById('form')
 const searchInput = document.getElementById('searchInput')
+const theme = document.getElementById('theme')
+const userCard =document.getElementById('userCard')
 
 let user 
+
+// async function getUserData(user){
+//   let res = await fetch(`https://api.github.com/users/${user}`)
+//                       if(res.status == 200){
+//                         document.getElementById('errorMessage').textContent = ''
+//                         let data = await res.json()
+//                         console.log(data)
+//                         // return data
+//                         renderData(data)
+//                       } throw new Error(res.status)
+
+//                       .catch(Error =>{
+//                         document.getElementById('errorMessage').textContent = 'No result'
+//                         document.getElementById('searchInput').placeholder =''
+//                         document.getElementById('searchInput').style.width='25%'
+//                       })
+                      
+//                     }
+               
 
 function getUserData(user){
     fetch(`https://api.github.com/users/${user}`)
@@ -39,7 +60,7 @@ function renderData(data){
 
       document.getElementById('login').textContent =  data.login
       document.getElementById('userImage').src = data.avatar_url
-      document.getElementById('date').textContent =createdDate
+      document.getElementById('date').textContent =`Joined ${createdDate}`
 
       if(data.bio === null){
         document.getElementById('userBio').textContent= 'This profile has no bio.'
@@ -56,6 +77,7 @@ function renderData(data){
         document.querySelector('.location').classList.add('notAvailable')
       }else{
         document.getElementById('location').textContent = data.location
+        document.querySelector('.location').classList.remove('notAvailable')
       }
 
       if(data.blog === ''){
@@ -64,6 +86,7 @@ function renderData(data){
 
       }else{
         document.getElementById('blog').textContent = data.blog
+        document.querySelector('.blog').classList.remove('notAvailable')
       }
 
       if(data.twitter_username === null){
@@ -72,7 +95,7 @@ function renderData(data){
 
       }else{
         document.getElementById('twitter').textContent = data.twitter_username
-        // document.querySelector('.twitter').classList.remove('notAvailable')
+        document.querySelector('.twitter').classList.remove('notAvailable')
       }
 
       if(data.company === null){
@@ -81,6 +104,7 @@ function renderData(data){
 
       }else{
         document.getElementById('company').textContent = data.company
+        document.querySelector('.company').classList.remove('notAvailable')
       }
 
    
@@ -101,3 +125,24 @@ document.getElementById('searchInput').addEventListener('click',()=>{
   document.getElementById('errorMessage').textContent = ''
   document.getElementById('searchInput').style.width='100%'
 })
+
+
+theme.addEventListener('click',()=>{
+  document.body.classList.toggle('darkTheme')
+  document.body.style.transition = '1s'
+  userCard.style.transition = '1s'
+  if(document.body.classList.contains('darkTheme')){
+    theme.innerHTML = `
+    <p>Light</p>
+    <img src="./assets/icon-sun.svg" alt="" class="themeIcon">
+    `
+  }else{
+    theme.innerHTML =`
+    <p>Dark</p>
+    <img src="./assets/icon-moon.svg" alt="" class="themeIcon">
+    `
+  }
+  
+
+})
+
