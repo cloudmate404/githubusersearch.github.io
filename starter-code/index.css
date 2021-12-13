@@ -64,7 +64,7 @@ body{
     box-shadow: var(--card-box-shadow);
 }
 
-a, #button, .theme{
+a, #button, .theme, .lightTheme{
     cursor: pointer;
 }
 
@@ -72,7 +72,7 @@ a{
     text-decoration: none;
 }
 
-a:active, a:focus{
+a:active, a:focus, a:hover{
     text-decoration: underline;
 }
 
@@ -106,12 +106,32 @@ a:active, a:focus{
     font-style: normal;
 }
 
+.lightTheme{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.lightTheme p{
+    font-weight: 700;
+    font-size: 0.8125rem;
+    font-style: normal;
+}
+
 
 .theme:active,
 .theme:hover,
 .theme:focus{
     filter: brightness(20%);
 }
+
+.lightTheme:active,
+.lightTheme:hover,
+.lightTheme:focus{
+    filter: brightness(20%);
+}
+
 
 
 .themeIcon{
@@ -501,6 +521,6 @@ input:focus, textarea:focus, select:focus{
 @media (max-height: 750px) {
     .container{
         max-height: 95vh;
-       overflow-y: auto;
+       
     }
 }
