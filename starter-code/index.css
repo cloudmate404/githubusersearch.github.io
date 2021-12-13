@@ -45,7 +45,6 @@ body{
     flex-direction: column;
     gap: 1.5rem;
     height: auto;
-    /* padding: 2rem; */
     
 }
 
@@ -78,7 +77,6 @@ a:active, a:focus, a:hover{
 
 .userImage{
     width: 7.5rem;
-    /* height: 7.5rem; */
 }
 
 
@@ -132,11 +130,6 @@ a:active, a:focus, a:hover{
     filter: brightness(20%);
 }
 
-
-
-.themeIcon{
-    
-}
 
 
 
@@ -235,9 +228,7 @@ a:active, a:focus, a:hover{
     
 }
 
-.searchIcon{
-    
-}
+
 
 #searchInput{
     border: none;
@@ -258,9 +249,6 @@ input:focus, textarea:focus, select:focus{
     
 }
 
-#button{
-    /* margin-left: auto; */
-}
 
 
 
@@ -275,7 +263,6 @@ input:focus, textarea:focus, select:focus{
 .userHeader{
     display: flex;
     gap: 2rem;
-    
     width: 100%;
    
 
@@ -293,6 +280,7 @@ input:focus, textarea:focus, select:focus{
     justify-content: space-between;
     width: 80%;
 }
+
 .date{
     margin-top:0.5rem;
 }
@@ -302,6 +290,7 @@ input:focus, textarea:focus, select:focus{
     flex-direction: column;
     gap: 0.5rem;
 }
+
 .login{
     display: flex;
 }
@@ -311,7 +300,6 @@ input:focus, textarea:focus, select:focus{
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-   
     width: 80%;
     align-self: flex-end;
     padding-left: 2rem;
@@ -329,13 +317,10 @@ input:focus, textarea:focus, select:focus{
     padding: 1rem 2rem;
     background-color:var(--socialLinkbg-color);
     border-radius: 15px;
-
-    
     margin-bottom: 0;
 }
 
 .repos,  .followers, .following{
-    
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -348,7 +333,6 @@ input:focus, textarea:focus, select:focus{
     display: flex;
     flex-wrap: wrap;
     gap: 3rem;
-    
     margin-top: 0;
 }
 
