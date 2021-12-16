@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Screenshot
 
-![Light mode](/screenshot.png)
-![Dark mode](/screenshot2.png) 
+![Light mode](/screenshot.PNG)
+![Dark mode](/screenshot2.PNG) 
 
 
 
