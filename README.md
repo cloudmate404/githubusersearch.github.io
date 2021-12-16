@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.png)
-![](./screenshot2.png) 
+[./screenshot.png](./screenshot.png)
+[./screenshot2.png](./screenshot2.png) 
 
 Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
 
@@ -46,7 +46,7 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://blissful-hopper-91c57b.netlify.app/)
+- Live Site URL: [https://blissful-hopper-91c57b.netlify.app/](https://blissful-hopper-91c57b.netlify.app/)
 
 ## My process
   This will be my first solo project, so please forgive me for not following proper processes
@@ -79,7 +79,7 @@ I intend to use SASS in any new projects and increase my api and js usuage. Also
 ## Author
 
 - Website - [Hassan Abdulfatai-Ogunniyi](https://blissful-hopper-91c57b.netlify.app/)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [@cloudmate404](https://www.frontendmentor.io/profile/yourusername)
 - Twitter - [@yourusername](https://www.twitter.com/yourusername)
 
 **Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
