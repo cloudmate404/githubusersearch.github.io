@@ -16,7 +16,7 @@ This is a solution to the [GitHub user search app challenge on Frontend Mentor](
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
+
 
 ## Overview
 
@@ -53,11 +53,11 @@ Users should be able to:
 - Vanilla Js
 
 
-### What I learned
+### What I learnt
 
--Exntensive use of flexbox. This project may be small but the high in the usuage of flexbox
+-Exntensive use of flexbox, this project may be small but the high in the usuage of flexbox.
 
--Api. I used this project as an opportunity to learn working with apis
+-Api. I used this project as an opportunity to learn working with APIs.
 
 
 
@@ -79,4 +79,4 @@ I intend to use SASS in any new projects and increase my api and js usuage. Also
 
 ## Acknowledgments
 
-Honestly, a big shoutout to Scrimba and their teachers, awesome people. Also, shoutout to youtube devs, can never forget about them (too many to mention).
+Honestly, a big shoutout to Scrimba and their tutors, awesome people. Also, shoutout to youtube devs, can never forget about them (too many to mention).
